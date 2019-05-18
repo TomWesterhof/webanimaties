@@ -1,6 +1,6 @@
 # Webanimaties
 
-Bij webanimaties leren we animaties te gebruiken op het web. Zo zitten er keypress, mouseclick en hover animaties in het artboard welke digitaal is nagemaakt van een poster.
+Bij webanimaties leren we animaties te gebruiken op het web. Zo zitten er keypress, mouseclick en hover animaties in het artboard welke digitaal is nagemaakt van een poster. Ook is de pagina responsive. 
 
 
 ### Features
@@ -11,3 +11,11 @@ Bij webanimaties leren we animaties te gebruiken op het web. Zo zitten er keypre
 - Keypress pijl naar links
 - Keypress pijl naar rechts
 - Keypress enter-toets
+
+
+
+### Bronnen
+
+Clippath animation: https://codepen.io/SitePoint/pen/KzLbGe
+
+Font: http://fontsgeek.com/fonts/Compacta-Std-Bold
