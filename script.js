@@ -62,6 +62,47 @@ window.addEventListener('keydown', function (e) {
   }
 });
 
+var linksmobielbutton = document.querySelector('.pijllinksbutton');
+
+linksmobielbutton.addEventListener('click', function() {
+  var jpnofnlvis = document.querySelector('.vis' + jpnofnlvisi);
+  var jpnofnlvisblub = document.querySelector('.blub' + jpnofnlvisi);
+  jpnofnlvisi++;
+  jpnofnlvis.classList.add("jpnnlweg");
+  jpnofnlvisblub.classList.add("bubbelanimatieabsoluutniet");
+  if (jpnofnlvisi == 14) {
+    geenlandmeer.classList.add("geenlandmeer");
+  }
+});
+
+
+var rechtsmobielbutton = document.querySelector('.pijlrechtsbutton');
+
+rechtsmobielbutton.addEventListener('click', function() {
+  var chinesevis = document.querySelector('.china' + chinesevisi);
+  chinesevisi++;
+  chinesevis.classList.add("chinaweg");
+});
+
+
+var entermobielbutton = document.querySelector('.enterbutton');
+
+entermobielbutton.addEventListener('click', function() {
+  usvis.classList.add("omdraaien");
+  usvis.classList.add("vissenbang");
+  jpnweg.classList.add("vissenbang");
+  chnvis.classList.add("vissenbang");
+  rusvis.classList.add("ruserin");
+  setTimeout(function() {
+    geenlandmeer.classList.add("geenlandmeer");
+  }, 1000);
+  setTimeout(function() {
+    usvis.classList.add("helemaalweg");
+    jpnweg.classList.add("helemaalweg");
+    chnvis.classList.add("helemaalweg");
+  }, 3000);
+});
+
 
 
 
@@ -70,7 +111,6 @@ window.addEventListener('keydown', function (e) {
 
 
 // -------------------- VISSEN BLUBBEN --------------------
-
 
 var blub1 = document.querySelector('.vis1');
 var blub1circle = document.querySelector('.blub1');
@@ -280,4 +320,25 @@ blub13.addEventListener('mouseover', function() {
     blub13circle.classList.remove('bubbelanimatie1');
     blub13span.classList.remove('bubbelanimatie2');
   }, 20000);
+});
+
+
+var hoeveelblub = 1;
+var blubmobielbutton = document.querySelector('.vishoverbutton');
+
+blubmobielbutton.addEventListener('click', function() {
+  var blubmobiel = document.querySelector('.vis' + hoeveelblub);
+  var blubcirclemobiel = document.querySelector('.blub' + hoeveelblub);
+  var blubspanmobiel = document.querySelector('.blub' + hoeveelblub + 'groep');
+  blubcirclemobiel.classList.add('bubbelanimatie1');
+  blubspanmobiel.classList.add('bubbelanimatie2');
+
+  setTimeout(function() {
+    blubcirclemobiel.classList.remove('bubbelanimatie1');
+    blubspanmobiel.classList.remove('bubbelanimatie2');
+  }, 20000);
+  if (hoeveelblub === 13) {
+    hoeveelblub = 0;
+  }
+  hoeveelblub++;
 });

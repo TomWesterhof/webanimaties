@@ -12,6 +12,10 @@ body {
   margin: 4em;
 }
 
+header {
+  display: none;
+}
+
 
 
 /* -------------------- SVG + RESPONSIVE -------------------- */
@@ -43,6 +47,38 @@ svg[data-name=JPN] {
   opacity: 0;
 }
 
+.blub1.bubbelanimatie1,
+.blub2.bubbelanimatie1,
+.blub3.bubbelanimatie1,
+.blub4.bubbelanimatie1,
+.blub5.bubbelanimatie1,
+.blub6.bubbelanimatie1,
+.blub7.bubbelanimatie1,
+.blub8.bubbelanimatie1,
+.blub9.bubbelanimatie1,
+.blub10.bubbelanimatie1,
+.blub11.bubbelanimatie1,
+.blub12.bubbelanimatie1,
+.blub13.bubbelanimatie1 {
+  opacity: 1;
+}
+
+.jpnnlweg .blub1.bubbelanimatie1,
+.jpnnlweg .blub2.bubbelanimatie1,
+.jpnnlweg .blub3.bubbelanimatie1,
+.jpnnlweg .blub4.bubbelanimatie1,
+.jpnnlweg .blub5.bubbelanimatie1,
+.jpnnlweg .blub6.bubbelanimatie1,
+.jpnnlweg .blub7.bubbelanimatie1,
+.jpnnlweg .blub8.bubbelanimatie1,
+.jpnnlweg .blub9.bubbelanimatie1,
+.jpnnlweg .blub10.bubbelanimatie1,
+.jpnnlweg .blub11.bubbelanimatie1,
+.jpnnlweg .blub12.bubbelanimatie1,
+.jpnnlweg .blub13.bubbelanimatie1 {
+  opacity: 0;
+}
+
 svg[data-name=JPN] polygon {
   transition: fill 3s ease-in-out;
 }
@@ -54,8 +90,6 @@ svg[data-name=JPN].japankleur polygon {
 svg[data-name=JPN].japankleur ellipse {
   fill: #c5283d !important;
 }
-
- /* fill="#c5283d" */
 
 @media (max-width: 1250px) {
   svg[data-name=US] {
@@ -112,6 +146,20 @@ svg[data-name=JPN].japankleur ellipse {
   }
   svg[data-name=JPN]>g:nth-of-type(1) {
     transform: translate(130px, -60px);
+  }
+  header {
+    display: block;
+    position: absolute;
+    margin: 0 .5em;
+    top: 1em;
+  }
+  header button {
+    color: white;
+    background-color: rgba(255, 255, 255, .1);
+    border: 0;
+    padding: 1em 1.5em;
+    margin: 0 .5em;
+    cursor: pointer;
   }
 }
 
@@ -298,43 +346,55 @@ div.titel > h1:nth-of-type(3) {
 
 /* -------------------- ANIMATIES -------------------- */
 
-svg[data-name=US] {
-  animation: userin 6s ease-out;
+@media (min-width: 670px) {
+  svg[data-name=US] {
+    animation: userin 6s ease-out;
+  }
+
+  @keyframes userin {
+    0%   {transform: translate(90vw, -10vw)}
+    100% {transform: translate(0vw, 0vw)}
+  }
+
+  svg[data-name=JPN] {
+    animation: jpnerin 6s ease-out;
+  }
+
+  @keyframes jpnerin {
+    0%   {transform: translate(90vw, 10vw)}
+    20%  {transform: translate(90vw, 10vw)}
+    100% {transform: translate(0vw, 0vw)}
+  }
+
+  svg[data-name=CHN] {
+    animation: chnerin 6s ease-out;
+  }
+
+  @keyframes chnerin {
+    0%   {transform: translate(-130vw, -10vw)}
+    85%  {transform: translate(-130vw, -10vw)}
+    100% {transform: translate(0vw, 0vw)}
+  }
+
+  div.titel {
+    animation: titelerin 7s ease-out;
+  }
+
+  @keyframes titelerin {
+    0%   {opacity: 0;}
+    90%  {opacity: 0;}
+    100% {opacity: 1;}
+  }
 }
 
-@keyframes userin {
-  0%   {transform: translate(90vw, -10vw)}
-  100% {transform: translate(0vw, 0vw)}
-}
-
-svg[data-name=JPN] {
-  animation: jpnerin 6s ease-out;
-}
-
-@keyframes jpnerin {
-  0%   {transform: translate(90vw, 10vw)}
-  20%  {transform: translate(90vw, 10vw)}
-  100% {transform: translate(0vw, 0vw)}
-}
-
-svg[data-name=CHN] {
-  animation: chnerin 6s ease-out;
-}
-
-@keyframes chnerin {
-  0%   {transform: translate(-90vw, -10vw)}
-  85%  {transform: translate(-90vw, -10vw)}
-  100% {transform: translate(0vw, 0vw)}
-}
-
-div.titel {
-  animation: titelerin 7s ease-out;
-}
-
-@keyframes titelerin {
-  0%   {opacity: 0;}
-  90%  {opacity: 0;}
-  100% {opacity: 1;}
+@media (max-width: 670px) {
+  main {
+    animation: mainerin 2s ease-in-out;
+  }
+  @keyframes mainerin {
+    0%   {opacity: 0}
+    100% {opacity: 1}
+  }
 }
 
 svg[data-name=RUS] {
@@ -353,6 +413,19 @@ svg[data-name=RUS].ruserin {
   0%   {transform: translate(0vw, -10vw)}
   100% {transform: translate(60vw, 0vw)}
 }
+
+@media (max-width: 850px) {
+  svg[data-name=RUS] {
+    width: 80vw;
+    left: -90vw;
+    margin-right: 5vw;
+  }
+  @keyframes ruserin {
+    0%   {transform: translate(0vw, -10vw)}
+    100% {transform: translate(110vw, 10vw)}
+  }
+}
+
 
 
 
@@ -469,6 +542,15 @@ svg[data-name=US].vissenbang {
 svg[data-name="JPN"].vissenbang>g>polygon {
   animation: polygons 2s;
   animation-delay: .5s;
+}
+
+@media (max-width: 850px) {
+  @keyframes vissenbang {
+    to {transform: translate(170vw, 50vw)}
+  }
+  @keyframes vissenbangus {
+    to {transform: translate(170vw, 50vw) scaleX(-1)}
+  }
 }
 
 @keyframes polygons {
