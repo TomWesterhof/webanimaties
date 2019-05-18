@@ -1,0 +1,485 @@
+/* -------------------- ALGEMEEN -------------------- */
+
+@font-face {
+    font-family: CompactaStdBold;
+    src: url("CompactaStdBold.otf") format("opentype"); /* FONT FROM: http://fontsgeek.com/fonts/Compacta-Std-Bold */
+}
+
+body {
+  background-color: #0d1321;
+  font-family: "CompactaStdBold", sans-serif;
+  color: white;
+  margin: 4em;
+}
+
+
+
+/* -------------------- SVG + RESPONSIVE -------------------- */
+
+svg[data-name=US] {
+  position: absolute;
+  width: 42vw;
+  left: 20vw;
+  overflow: visible;
+}
+
+svg[data-name=CHN] {
+  position: absolute;
+  width: 24vw;
+  top: 10vh;
+  right: 12vw;
+  overflow: visible;
+}
+
+svg[data-name=JPN] {
+  position: absolute;
+  width: 30vw;
+  top: 50vh;
+  right: 13vw;
+  overflow: visible;
+}
+
+.blub1, .blub2, .blub3, .blub4, .blub5, .blub6, .blub7, .blub8, .blub9, .blub10, .blub11, .blub12, .blub13 {
+  opacity: 0;
+}
+
+svg[data-name=JPN] polygon {
+  transition: fill 3s ease-in-out;
+}
+
+svg[data-name=JPN].japankleur polygon {
+  fill: #ffffff !important;
+}
+
+svg[data-name=JPN].japankleur ellipse {
+  fill: #c5283d !important;
+}
+
+ /* fill="#c5283d" */
+
+@media (max-width: 1250px) {
+  svg[data-name=US] {
+    width: 50vw;
+    left: 15vw;
+  }
+  svg[data-name=CHN] {
+    width: 26vw;
+  }
+  svg[data-name=CHN] .china1 {
+    transform: translate(100px, 40px);
+  }
+  svg[data-name=JPN] {
+    width: 32vw;
+  }
+}
+
+@media (max-width: 1050px) {
+  svg[data-name=US] {
+    width: 55vw;
+    left: 10vw;
+  }
+  svg[data-name=CHN] {
+    width: 27vw;
+  }
+  svg[data-name=JPN] {
+    top: 35vw;
+    width: 35vw;
+  }
+}
+
+@media (max-width: 850px) {
+  svg[data-name=US] {
+    width: 70vw;
+    left: 10vw;
+  }
+  svg[data-name=CHN] {
+    width: 32vw;
+    right: 3vw;
+    top: 11vh;
+  }
+  svg[data-name=CHN] .china1 {
+    transform: translate(180px, 80px);
+  }
+  svg[data-name=JPN] {
+    top: 45vw;
+    right: 5vw;
+    width: 40vw;
+  }
+  svg[data-name=JPN]>g:nth-of-type(4),
+  svg[data-name=JPN]>g:nth-of-type(5),
+  svg[data-name=JPN]>g:nth-of-type(6) {
+    transform: translateX(130px);
+  }
+  svg[data-name=JPN]>g:nth-of-type(1) {
+    transform: translate(130px, -60px);
+  }
+}
+
+@media (max-width: 670px) {
+  body {
+    margin: 4em 0 0;
+  }
+  div.vissen {
+    width: 100vw;
+    height: calc(100vh - 4em);
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  svg[data-name=US] {
+    position: relative;
+    width: 36em;
+    margin-right: 12em;
+  }
+  svg[data-name=CHN] {
+    position: relative;
+    width: 16em;
+    transform: translate(500px, -700px);
+  }
+  svg[data-name=CHN]>g:nth-of-type(1) {
+    transform: translate(60px, 60px);
+  }
+  svg[data-name=JPN] {
+    position: relative;
+    width: 20em;
+    top: 0;
+    transform: translate(150px, -140px);
+  }
+  svg[data-name=JPN]>g:nth-of-type(4),
+  svg[data-name=JPN]>g:nth-of-type(5),
+  svg[data-name=JPN]>g:nth-of-type(6) {
+    transform: translateX(0px);
+  }
+  svg[data-name=JPN]>g:nth-of-type(1),
+  svg[data-name=JPN]>g:nth-of-type(2) {
+    transform: translateY(140px);
+  }
+  svg[data-name=JPN]>g:nth-of-type(11) {
+    transform: translate(-60px, -30px);
+  }
+  svg[data-name=JPN]>g:nth-of-type(13) {
+    transform: translate(-60px, -30px);
+  }
+}
+
+@media (max-width: 579px) {
+  body {
+    margin: 4em 0 0;
+  }
+  div.vissen {
+    width: 100vw;
+    height: calc(100vh - 4em);
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  svg[data-name=US] {
+    position: relative;
+    width: 36em;
+    margin-right: 10em;
+  }
+  svg[data-name=CHN] {
+    position: relative;
+    width: 16em;
+    transform: translate(460px, -560px)
+  }
+  svg[data-name=CHN]>g:nth-of-type(1) {
+    transform: translate(60px, 60px);
+  }
+  svg[data-name=JPN] {
+    position: relative;
+    width: 20em;
+    top: 0;
+    transform: translate(390px, -250px);
+  }
+  svg[data-name=JPN]>g:nth-of-type(4),
+  svg[data-name=JPN]>g:nth-of-type(5),
+  svg[data-name=JPN]>g:nth-of-type(6) {
+    transform: translateX(0px);
+  }
+  svg[data-name=JPN]>g:nth-of-type(1),
+  svg[data-name=JPN]>g:nth-of-type(2) {
+    transform: translateY(140px);
+  }
+  svg[data-name=JPN]>g:nth-of-type(11) {
+    transform: translate(-60px, -30px);
+  }
+  svg[data-name=JPN]>g:nth-of-type(13) {
+    transform: translate(-60px, -30px);
+  }
+}
+
+@media (max-width: 400px) {
+  svg[data-name=JPN] {
+    transform: translate(360px, -250px);
+  }
+}
+
+
+
+
+/* -------------------- TEKST -------------------- */
+
+div.titel {
+  position: absolute;
+  left: 130px;
+  bottom: 70px;
+  padding: 1em 1em 0 0;
+  background-color: rgba(13,19,33, .5);
+}
+
+div.titel > h1 {
+  font-size: 4em;
+  letter-spacing: -0.02em;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+div.titel > h1:nth-of-type(n+2) {
+  color: #c5283d;
+}
+
+div.titel > h1:nth-of-type(3) {
+  cursor: pointer;
+}
+
+@media (max-width: 1160px) {
+  div.titel {
+    left: 90px;
+    bottom: 50px;
+  }
+}
+
+@media (max-width: 960px) {
+  div.titel {
+    left: 65px;
+    bottom: 40px;
+  }
+}
+
+@media (max-width: 800px) {
+  div.titel {
+    left: 45px;
+    bottom: 25px;
+  }
+  div.titel > h1 {
+    font-size: 3.5em;
+  }
+}
+
+@media (max-width: 630px) {
+  div.titel {
+    left: 35px;
+    bottom: 20px;
+    width: calc(100% - 1em - 35px);
+  }
+  div.titel > h1 {
+    font-size: 3em;
+  }
+
+}
+
+@media (max-width: 500px) {
+  div.titel > h1:nth-of-type(1) {
+    display: block;
+  }
+  div.titel > h1:nth-of-type(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  div.titel > h1:nth-of-type(1) {
+    margin-right: 35px;
+  }
+}
+
+
+
+/* -------------------- ANIMATIES -------------------- */
+
+svg[data-name=US] {
+  animation: userin 6s ease-out;
+}
+
+@keyframes userin {
+  0%   {transform: translate(90vw, -10vw)}
+  100% {transform: translate(0vw, 0vw)}
+}
+
+svg[data-name=JPN] {
+  animation: jpnerin 6s ease-out;
+}
+
+@keyframes jpnerin {
+  0%   {transform: translate(90vw, 10vw)}
+  20%  {transform: translate(90vw, 10vw)}
+  100% {transform: translate(0vw, 0vw)}
+}
+
+svg[data-name=CHN] {
+  animation: chnerin 6s ease-out;
+}
+
+@keyframes chnerin {
+  0%   {transform: translate(-90vw, -10vw)}
+  85%  {transform: translate(-90vw, -10vw)}
+  100% {transform: translate(0vw, 0vw)}
+}
+
+div.titel {
+  animation: titelerin 7s ease-out;
+}
+
+@keyframes titelerin {
+  0%   {opacity: 0;}
+  90%  {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+svg[data-name=RUS] {
+  position: absolute;
+  width: 40vw;
+  left: -50vw;
+  overflow: visible;
+}
+
+svg[data-name=RUS].ruserin {
+  animation: ruserin 3s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes ruserin {
+  0%   {transform: translate(0vw, -10vw)}
+  100% {transform: translate(60vw, 0vw)}
+}
+
+
+
+.bubbelanimatie1 {
+  animation: bubbelomhoog 20s linear infinite;
+}
+
+.bubbelanimatie2 {
+  animation: bubbelbeweeg 5s ease-in-out infinite alternate;
+}
+
+@keyframes bubbelomhoog {
+  0%   {transform: translateY(20px); opacity: 1;}
+  4%   {transform: translateY(0px); opacity: 1;}
+  95%  {transform: translateY(-95vh); opacity: 1;}
+  100% {transform: translateY(-100vh); opacity: 0;}
+}
+
+@keyframes bubbelbeweeg {
+  0%   {transform: translateX(10px);}
+  25%  {transform: translateX(-50px);}
+  75%  {transform: translateX(30px);}
+  100% {transform: translateX(-20px);}
+}
+
+@media (max-width: 630px) {
+  @keyframes bubbelomhoog {
+    0%   {transform: translateY(20px);}
+    4%   {transform: translateY(0px);}
+    100% {transform: translateY(-200vh);}
+  }
+}
+
+.bubbelanimatieabsoluutniet {
+  animation: bubbelweg 1s ease;
+}
+
+@keyframes bubbelweg {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+svg[data-name=JPN]>g>polygon, svg[data-name=JPN]>g>ellipse {
+  transition: transform 3s ease-in;
+}
+
+.jpnnlweg polygon, .jpnnlweg ellipse {
+  transform: translateX(-270vw);
+}
+
+svg[data-name=CHN]>g {
+  transition: transform .4s ease-in;
+}
+
+.chinaweg {
+  transform: translateX(70vw) !important;
+}
+
+@media (max-width: 850px) {
+  .chinaweg {
+    transform: translateX(170vw) !important;
+  }
+}
+
+h1:nth-of-type(n+2) {
+  transition: opacity .5s ease-in-out;
+}
+
+.geenlandmeer h1:nth-of-type(n+2) {
+  opacity: 0;
+}
+
+.usknipper {
+  animation: usknipper 5s linear infinite;
+  transform-origin: 0% 28%;
+}
+
+@keyframes usknipper {
+  0%   {transform: scale(1, 1);fill: #63372c;}
+  2%   {transform: scale(1, .05);fill: #0d1321;}
+  4%   {transform: scale(1, 1);fill: #63372c;}
+  100% {transform: scale(1, 1);fill: #63372c;}
+}
+
+svg[data-name=US] {
+  transition: transform .4s;
+}
+
+.omdraaien {
+  transform: scaleX(-1) !important;
+}
+
+
+svg[data-name=CHN].vissenbang, svg[data-name=JPN].vissenbang {
+  animation: vissenbang 2s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+@keyframes vissenbang {
+  to {transform: translate(70vw, 50vw)}
+}
+
+svg[data-name=US].vissenbang {
+  animation: vissenbangus 2s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+@keyframes vissenbangus {
+  to {transform: translate(70vw, 50vw) scaleX(-1)}
+}
+
+svg[data-name="JPN"].vissenbang>g>polygon {
+  animation: polygons 2s;
+  animation-delay: .5s;
+}
+
+@keyframes polygons {
+  0%   {-webkit-clip-path: polygon(0 0, 60% 0, 100% 0, 100% 50%, 100% 100%, 60% 100%, 0 100%);
+        clip-path: polygon(0 0, 60% 0, 100% 0, 100% 50%, 100% 100%, 60% 100%, 0 100%);}
+  40%  {-webkit-clip-path: polygon(10% 30%, 50% 30%, 50% 10%, 90% 45%, 50% 85%, 50% 65%, 10% 65%);
+        clip-path: polygon(10% 30%, 50% 30%, 50% 10%, 90% 45%, 50% 85%, 50% 65%, 10% 65%);}
+  100% {-webkit-clip-path: polygon(10% 30%, 50% 30%, 50% 10%, 90% 45%, 50% 85%, 50% 65%, 10% 65%);
+        clip-path: polygon(10% 30%, 50% 30%, 50% 10%, 90% 45%, 50% 85%, 50% 65%, 10% 65%);}
+}
+
+svg[data-name=CHN].helemaalweg, svg[data-name=JPN].helemaalweg, svg[data-name=US].helemaalweg {
+  display: none;
+}
