@@ -1,6 +1,6 @@
 # Webanimaties
 
-Bij webanimaties leren we animaties te gebruiken op het web. Zo zitten er keypress, mouseclick en hover animaties in het artboard welke digitaal is nagemaakt van een poster. Ook is de pagina responsive. 
+Bij webanimaties leren we animaties te gebruiken op het web. Zo zitten er keypress, mouseclick en hover animaties in het artboard welke digitaal is nagemaakt van een poster. Ook is de pagina responsive. Bekijk het resultaat op https://tomwesterhof.github.io/webanimaties/. 
 
 
 ### Features
