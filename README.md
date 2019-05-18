@@ -16,6 +16,16 @@ Bij webanimaties leren we animaties te gebruiken op het web. Zo zitten er keypre
 
 ### Bronnen
 
+Originele poster: 
+
+![alt text](https://cdn-images-1.medium.com/max/1600/0*t1KPGPHAXmlR88NJ.jpg)
+
+Ontworpen door Takashi Kono
+
+
+
 Clippath animation: https://codepen.io/SitePoint/pen/KzLbGe
+
+
 
 Font: http://fontsgeek.com/fonts/Compacta-Std-Bold
