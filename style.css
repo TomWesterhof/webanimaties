@@ -560,7 +560,7 @@ svg[data-name="JPN"].vissenbang>g>polygon {
         clip-path: polygon(10% 30%, 50% 30%, 50% 10%, 90% 45%, 50% 85%, 50% 65%, 10% 65%);}
   100% {-webkit-clip-path: polygon(10% 30%, 50% 30%, 50% 10%, 90% 45%, 50% 85%, 50% 65%, 10% 65%);
         clip-path: polygon(10% 30%, 50% 30%, 50% 10%, 90% 45%, 50% 85%, 50% 65%, 10% 65%);}
-}
+} /* FROM: https://codepen.io/SitePoint/pen/KzLbGe */
 
 svg[data-name=CHN].helemaalweg, svg[data-name=JPN].helemaalweg, svg[data-name=US].helemaalweg {
   display: none;
